@@ -1,3 +1,4 @@
+/*DAVID MATEO CUENCA*/
 {
 	var masterMind = function(){
 		let arrayColores =  ["Amarillo", "Azul", "Blanco", "Marron", "Naranja", "Negro", "Rojo", "Verde"];
@@ -53,7 +54,22 @@
 				}
 
 				if(posicionCorrecta === 4){
-					$("#ventanaModal").css("display", "block");
+					$( "#dialog-confirm" ).css("display", 'block');
+					$( "#dialog-confirm" ).dialog({
+				    	resizable: false,
+				    	height: "auto",
+				    	width: 240,
+				    	modal: true,
+				    	buttons: {
+				    		"Volver a jugar": function() {
+				  				location.reload(true);
+				    		},
+				    		"Salir": function() {
+				     			window.close();
+				    		}
+				    	}
+				    });
+
 				}else{
 					nuevaFila();
 					for(let i = 0; i < 4; i++){
@@ -74,6 +90,8 @@
 				elemento.attr('src', 'img/vacioGrande.svg');
 				arrayCirculos[index] = undefined;
 				elemento.addClass('vacio');
+				$(elemento).toggle("explode");
+				$(elemento).toggle("explode");	
 			}
 		}
 
@@ -90,19 +108,23 @@
 			for (let i = 0; i < 4; i++) {
 				let $circulo = $('<img>', {'id': 'vacioPequeño'+i, 'src': 'img/vacioPequeño.svg'});
 				$(blancosYNegros).append($circulo);
-			}				
+			}
+			$($divCirculos).effect("slide", 800);				
 			window.scrollTo(0, 0);
 		}
 
-		let crearCirculos = function(tablero, imagen){
+		let rellenarCirculos = function(tablero, imagen){
 			let cajaActual = tablero.children()[tablero.children().length-1];
 			for(let i = 0; i < 4; i++){
-				if(arrayCirculos[i] === undefined){
+				if(arrayCirculos[i] === undefined){				
 					let arraySrc = imagen.split("/");
 					let stringColor = arraySrc[arraySrc.length-1];
 					let color = stringColor.slice(0, stringColor.length-4);
 					arrayCirculos[i] = color;
-					$(cajaActual).children()[i].src = imagen;
+					let $elementoActual = $(cajaActual).children()[i];
+					$elementoActual.src = imagen;
+				    $($elementoActual).toggle("scale", 200);
+				    $($elementoActual).toggle("scale", 200);			       
 					break;
 				}
 			}
@@ -113,7 +135,7 @@
 			tablero = $("#tablero");
 			let arrayImgs = $("img");
 			for (let i = 0; i < 8; i++) {
-				$(arrayImgs[i]).on("click", crearCirculos.bind(null, tablero, arrayImgs[i].src));
+				$(arrayImgs[i]).on("click", rellenarCirculos.bind(null, tablero, arrayImgs[i].src));
 			}
 			nuevaFila();
 			$("#aceptar").on("click", comprobarColores.bind(null, tablero));

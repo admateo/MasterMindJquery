@@ -1,8 +1,8 @@
 body{
-	background-image: url('../img/fondo.jpg');
+	background-color: #F5F5F5;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
-	color: white;
+	color: black;
 }
 
 #empezar{
@@ -17,33 +17,11 @@ body{
 	cursor: pointer;
 	outline: none;
 	border: 1px solid #AB1809;
+	color: white;
 }
 
 
 #empezar:active {
-   border: 1px inset #000;
-   background: #BE1B0B; 
-}
-
-#cerrar{
-	font-size: 18px;
-	background: #d60808;
-	border-radius: 5px;
-	padding: .3em .7em;
-	width: 70px;
-	margin: 0 auto;
-	margin-top: 8%;
-	box-shadow: -3px 3px 12px 1px rgba(0,0,0,0.75);
-	cursor: pointer;
-	outline: none;
-	border: 1px solid #AB1809;
-}
-
-#cerrar:hover {
-   cursor: pointer;
-}
-
-#cerrar:active {
    border: 1px inset #000;
    background: #BE1B0B; 
 }

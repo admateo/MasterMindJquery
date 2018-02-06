@@ -1,7 +1,7 @@
 body{
-	background-image: url('../img/fondo.jpg');
+	background-color: #F5F5F5;
 	font-family: 'Roboto', sans-serif;
-	color: white;
+	color: black;
 }
 
 #circulosVacios > img{
@@ -77,60 +77,6 @@ div{
 }
 
 /*	Ventana modal	*/
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% 17%; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%; 
-}
-
-.modal-content p{
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 30px;
-}
-
-.botones{
-	display: flex;
-	flex-flow: row;
-	justify-content: space-between;
-}
-
-#reiniciar{
-	border-radius: 5px;
-    color: #ffffff;
-    font-size: 18px;
-    background: #d60808;
-    padding: 8px 20px;
-    text-decoration: none;
-	margin-bottom: 10px;
-	outline: none;
-}
-
-#salir{
-	border-radius: 5px;
-    color: #ffffff;
-    font-size: 18px;
-    background: #d60808;
-    padding: 8px 20px;
-    text-decoration: none;
-	margin-bottom: 10px;
-	outline: none;
+#dialog-confirm{
+	display: none;
 }

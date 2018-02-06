@@ -4,7 +4,11 @@
 		<meta charset="UTF-8">
 		<title>Mastermind - Mateo Cuenca David</title>
 		<link rel="stylesheet" type="text/css" href="css/style_juego.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">	
+		
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
 		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/juego.js"></script>
 	</head>
 	<body>
@@ -15,14 +19,12 @@
 			<main>
 				<section id="tablero">
 				</section>
-				<div id="ventanaModal" class="modal">
-				  <div class="modal-content">
-				    <p>¡HAS GANADO!</p>
-				    <div class="botones">
-				    	<button id="reiniciar">Volver a jugar</button>
-				    	<button id="salir">Salir</button>
-				    </div>
-				  </div>
+				<div id="dialog-confirm" title="¡Has ganado el juego!">
+					<p>
+						<span>
+							¡Has ganado!
+						</span>
+					</p>
 				</div>
 			</main>
 			<aside>
