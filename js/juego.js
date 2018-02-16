@@ -40,11 +40,9 @@
 						esta++;
 					}
 				}
-
 				return [posicionCorrecta + esta, posicionCorrecta, elementosTablero];
 			}
 		}
-
 		return {
 			init: iniciarJuego,
 			comprobarColores
@@ -57,7 +55,7 @@
 		$tablero = $("#tablero");
 		let arrayImgs = $("img");
 		for (let i = 0; i < 8; i++) {
-			$(arrayImgs[i]).click(crearCirculos.bind(null, $tablero, arrayImgs[i].src));
+			$(arrayImgs[i]).click(crearCirculos($tablero, arrayImgs[i].src));
 		}
 		nuevaFila();
 
@@ -97,7 +95,7 @@
 		$('#tablero').append($divCirculos);
 		for (let i = 0; i < 4; i++) {
 			let $circulo = $('<img>', {'id': 'vacioGrande'+i, 'src': 'img/vacioGrande.svg'});
-			$circulo.on("click", quitarCirculo.bind(null, $circulo, i));
+			$circulo.on("click", quitarCirculo($circulo, i));
 			$('#circulosVacios:last-child').append($circulo);	
 		}
 		let blancosYNegros = $('<div/>');
