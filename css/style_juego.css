@@ -28,8 +28,6 @@ h1{
 
 main{
 	width: 85%;
-    *height: 550px;
-    *overflow: scroll;
 }
 
 aside{
@@ -79,4 +77,10 @@ div{
 /*	Ventana modal	*/
 #dialog-confirm{
 	display: none;
+}
+
+p{
+	margin: 7px 0;
+	font-size: 29px;
+	text-align: center;
 }
