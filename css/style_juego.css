@@ -70,10 +70,6 @@ div{
 	font-size: 80px;
 }
 
-.relleno{
-	cursor: none;
-}
-
 /*	Ventana modal	*/
 #dialog-confirm{
 	display: none;
